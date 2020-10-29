@@ -29,9 +29,12 @@ export default {
   emits: ['search'],
   setup(props, context){
     onMounted(() => {
+
       const text = document.querySelector('#cityName').focus();
       const bar = document.querySelector('.container');
       bar.style.backgroundImage = `linear-gradient(to bottom, ${props.first}, ${props.second})`;
+
+
     });
 
 
@@ -82,7 +85,7 @@ export default {
     return {
         submit,
         notValid,
-        city
+        city,
     }
   }
 }

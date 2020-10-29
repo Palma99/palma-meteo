@@ -28,7 +28,7 @@
 <script>
 import axios from 'axios';
 import { onMounted, reactive, ref, computed } from 'vue';
-const API_URL = 'http://api.openweathermap.org/data/2.5/weather';
+const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const cityData = reactive({
     name: String,
@@ -68,9 +68,9 @@ export default {
                     + weather.weather[0].description.slice(1)
                 );
 
-                icon.value = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+                icon.value = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
             } catch (err) {
-                console.error(err);
+                
             }
         });
 
